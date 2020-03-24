@@ -1,9 +1,9 @@
-import scala.collection.mutable.Map
+import scala.collection.mutable.LinkedHashMap
 
 class FirstNonRepeatingCharacter{
 	
 	def findFirstNonRepeatingCharacter(text: String) = {
-		val dataSet = Map.empty[Char, Int]
+		val dataSet = LinkedHashMap.empty[Char, Int]
 		
 		for(c <- text){
 			if(dataSet.contains(c))
@@ -15,7 +15,7 @@ class FirstNonRepeatingCharacter{
 		val res = for((k, v) <- dataSet; n = k; if (v == 0) )	 
 		yield n
 		
-		res.head
+		if (!res.isEmpty) res.head
 	}
 	
 }

@@ -26,7 +26,7 @@ public class FirstNonRepeatingCharacter{
 
 
     public static void main(String[] args) {
-        String data = "ababc";
+        String data = "abc";
         System.out.println(findFirstNonRepeatingCharater(data));
     }
 }
