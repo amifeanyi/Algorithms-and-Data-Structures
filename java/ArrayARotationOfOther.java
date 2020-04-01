@@ -1,6 +1,6 @@
 public class ArrayARotationOfOther{
 
-public static boolean isTheSame(int[] array1, int[] array2){
+public static boolean isRotationOfTheOther(int[] array1, int[] array2){
          if(array1.length != array2.length)
              return false;
 
@@ -31,7 +31,7 @@ public static boolean isTheSame(int[] array1, int[] array2){
          int[] array1 = {1, 2, 3, 4, 5, 6, 7};
          int[] array2 = {4, 5, 6, 7, 1, 2, 3};
 
-         System.out.println(isTheSame(array1, array2));
+         System.out.println(isRotationOfTheOther(array1, array2));
 
      }
 }
