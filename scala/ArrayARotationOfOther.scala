@@ -9,19 +9,19 @@ class ArrayARotationOfOther{
 		
 		breakable
 		{
-			for((item, index) <- array2.view.zipWithIndex)
-				if(item == item_i){
-					key_i = index
-					break;
+			for(i <- array2.indices)
+				if(array2(i) == item_i){
+					key_i = i
+					break
 				}
 		}
 		
-		if(key_i == -1) false
+		if(key_i == -1) return false
 		
-		for((item, index) <- array1.view.zipWithIndex){
+		for(i <- array1.indices){
 			//calculate the index to resume from in the second array
-			j = (key_i + index) % array1.length
-			if(item != array2(j))
+			j = (key_i + i) % array1.length
+			if(array1(i) != array2(j))
 				return false 
 		}
 		true
