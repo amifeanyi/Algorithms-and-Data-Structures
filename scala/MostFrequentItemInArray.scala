@@ -27,7 +27,7 @@ class MostFrequentItemInArray{
 
 
 object MostFrequentItemInArray extends App{
-	val mfi = new MostFrequentItemInArray()
+	val mfi = new MostFrequentItemInArray
 	val inputData = Array(1, 2, 3, 5, 4, 2, 1, 2)
 	println(mfi.findMostFrequentItemInArray(inputData))
 }
